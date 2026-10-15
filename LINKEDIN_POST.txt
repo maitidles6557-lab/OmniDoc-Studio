@@ -1,0 +1,24 @@
+🚀 OmniDoc Studio — j'ai fait évoluer mon projet RAG vers un assistant documentaire MULTIMODAL
+
+Après une première version (Multi-DomaineAI), j'ai repensé l'architecture de A à Z : OmniDoc Studio permet de dialoguer avec ses PDF ET ses images, puis de modifier ses documents… en langage naturel.
+
+🔎 Ce que fait le projet
+• MultiRAG : deux espaces de recherche — texte (PDF, avec OCR pour les scans) et visuel (images extraites des PDF et légendées par Gemini Vision).
+• Recherche hybride : embeddings BGE-M3 + FAISS combinés à BM25, fusionnés par Reciprocal Rank Fusion.
+• Routeur de requêtes : le système décide s'il doit chercher dans le texte, les images, ou les deux.
+• Recherche cross-modale : une image téléversée enrichit la recherche dans les PDF.
+• Réponses ancrées et vérifiées : citations [fichier, page], passages surlignés sur la page d'origine, et score de fidélité calculé par une seconde passe LLM.
+• Éditeur PDF intelligent : « supprime les pages 2 à 4 », « caviarde les données personnelles », « ajoute un filigrane » → plan d'actions validé puis exécuté avec PyMuPDF.
+• Caviardage RGPD : détection d'e-mails, IBAN, téléphones, CIN avec suppression réelle du texte sous-jacent.
+
+🛠️ Stack
+Streamlit · PyMuPDF · Tesseract OCR · Sentence-Transformers (BGE-M3) · FAISS · BM25 · Groq · Google Gemini · SQLite
+
+💡 Ce que j'ai appris
+Un bon RAG ne se résume pas à « vecteurs + LLM » : la qualité vient du routage, de la recherche hybride, de la vérification des réponses et de la traçabilité des sources. Rendre l'édition de documents pilotable en langage naturel — avec un plan JSON relu avant exécution — est aussi un bon compromis entre puissance des LLM et contrôle utilisateur.
+
+Le code est modulaire (moteur de retrieval, couche LLM, éditeur PDF, interface) pour faciliter les évolutions.
+
+Je serais ravi d'avoir vos retours — notamment sur l'évaluation de la qualité de retrieval et sur d'autres idées d'actions d'édition ! 👇
+
+#RAG #MultiRAG #GenAI #LLM #Streamlit #Python #NLP #ComputerVision #OCR #FAISS #DocumentAI #IA

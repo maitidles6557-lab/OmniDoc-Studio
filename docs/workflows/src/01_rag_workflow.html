@@ -1,0 +1,52 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1620px}
+body{font-family:'Inter','Segoe UI',Arial,sans-serif;color:#F3F5FF;overflow:hidden;
+ background:radial-gradient(900px 500px at 85% -5%,#2b1f78 0%,transparent 60%),
+ radial-gradient(800px 500px at -5% 105%,#0f4a8a 0%,transparent 60%),#090D26}
+.page{padding:40px 48px 30px;height:1620px;display:flex;flex-direction:column}
+.top{display:flex;align-items:center;justify-content:space-between}
+.pill{font-weight:700;font-size:22px;letter-spacing:.08em;padding:8px 18px;border-radius:999px;
+ background:linear-gradient(90deg,#7C5CFF,#3CC8F0);color:#fff}
+.brand{font-size:24px;font-weight:600;color:#B8C2F0}
+h1{font-size:54px;line-height:1.05;margin:12px 0 4px;font-weight:800;letter-spacing:-.02em}
+.sub{font-size:25px;color:#B8C2F0;margin-bottom:12px;line-height:1.3}
+.flow{flex:1;display:flex;flex-direction:column;justify-content:space-between;min-height:0}
+.card{background:#141A45;border:2px solid #2B3570;border-radius:22px;padding:12px 22px 13px;position:relative}
+.card.v{border-color:#7C5CFF}.card.c{border-color:#3CC8F0}.card.p{border-color:#FF6FB5}
+.card.g{border-color:#43D9A3}.card.a{border-color:#FFC857}
+.row{display:flex;gap:16px}.row>*{flex:1;min-width:0}
+.hd{display:flex;align-items:center;gap:14px;margin-bottom:3px}
+.num{flex:none;width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+ font-weight:800;font-size:24px;color:#090D26;background:#7C5CFF}
+.v .num{background:#9C84FF}.c .num{background:#3CC8F0}.p .num{background:#FF6FB5}
+.g .num{background:#43D9A3}.a .num{background:#FFC857}
+.t{font-size:30px;font-weight:800;line-height:1.1}
+.d{font-size:24px;line-height:1.3;color:#D6DCFF}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.chip{font-size:21px;font-weight:600;padding:4px 14px;border-radius:999px;background:#0D1235;
+ border:1.5px solid #3A4590;color:#E6EAFF;white-space:nowrap}
+.chip.v{border-color:#9C84FF;color:#CFC3FF}.chip.c{border-color:#3CC8F0;color:#A8E7FA}
+.chip.p{border-color:#FF6FB5;color:#FFC0DE}.chip.g{border-color:#43D9A3;color:#A6F0D2}
+.chip.a{border-color:#FFC857;color:#FFE3A3}
+.arrow{height:22px;display:flex;align-items:center;justify-content:center;color:#7C8CE8;font-size:24px;line-height:1}
+.arrow{position:relative}.arrow small{position:absolute;left:calc(50% + 28px);font-size:20px;color:#9AA6D6;font-weight:600}
+.mini{border:2px dashed #3CC8F0;border-radius:24px;padding:14px 18px 16px;background:rgba(60,200,240,.06)}
+.mini .cap{font-size:23px;font-weight:700;color:#7DDCF7;margin-bottom:10px;letter-spacing:.02em}
+.lane{display:flex;flex-direction:column;align-items:center;gap:0}
+.box{width:100%;text-align:center;border-radius:16px;padding:10px 10px;font-size:23px;font-weight:700;line-height:1.2;
+ background:#0D1235;border:2px solid #3A4590}
+.box small{display:block;font-size:19px;font-weight:500;color:#B8C2F0;margin-top:2px}
+.box.v{border-color:#9C84FF}.box.c{border-color:#3CC8F0}.box.p{border-color:#FF6FB5}.box.g{border-color:#43D9A3}.box.a{border-color:#FFC857}
+.lane .arrow{height:20px;font-size:20px}
+.merge{margin-top:8px;text-align:center;font-size:23px;font-weight:700;padding:9px;border-radius:14px;
+ background:linear-gradient(90deg,rgba(124,92,255,.35),rgba(60,200,240,.35));border:2px solid #7C8CE8}
+.note{border-radius:22px;padding:16px 22px;background:linear-gradient(100deg,rgba(255,111,181,.18),rgba(124,92,255,.22));
+ border:2px solid #FF6FB5;font-size:25px;line-height:1.3;color:#FFE3F1}
+.note b{color:#fff}
+.foot{margin-top:12px;display:flex;justify-content:space-between;font-size:21px;color:#8F9BD0}
+.sec{font-size:21px;font-weight:800;letter-spacing:.12em;color:#8F9BD0;margin:0 0 8px 4px}
+</style></head><body>
+<div class="page"><div class="top"><span class="pill">WORKFLOW 1/3</span><span class="brand">OmniDoc Studio</span></div>
+<h1>Le pipeline RAG</h1><div class="sub">De vos fichiers à une réponse citée et vérifiée</div><div class="flow"><div class="mini"><div class="cap">MINI-WORKFLOW · IMPORT DES RESSOURCES</div><div class="row"><div class="lane"><div class="box v">PDF texte</div><div class="arrow">▼</div><div class="box v">PyMuPDF<small>extraction du texte</small></div></div><div class="lane"><div class="box a">PDF scanné</div><div class="arrow">▼</div><div class="box a">Tesseract OCR<small>fra · ara · eng</small></div></div><div class="lane"><div class="box p">Images</div><div class="arrow">▼</div><div class="box p">Gemini Vision<small>légende + texte lu</small></div></div></div><div class="merge">Texte propre + métadonnées (fichier · page)</div></div><div class="arrow">▼</div><div class="card v"><div class="hd"><span class="num">1</span><span class="t">Chunking</span></div><div class="d">Le texte est découpé en blocs de 900 caractères, avec 150 de recouvrement.</div><div class="chips"><span class="chip v">Python</span><span class="chip ">coupe sur espace</span><span class="chip ">fichier · page · n°</span></div></div><div class="arrow">▼</div><div class="row"><div class="card c"><div class="hd"><span class="num">2</span><span class="t">Embedding</span></div><div class="d">Chaque chunk devient un vecteur de sens, rangé dans un index.</div><div class="chips"><span class="chip c">BGE-M3</span><span class="chip c">Sentence-Transformers</span><span class="chip c">FAISS</span></div></div><div class="card g"><div class="hd"><span class="num">2b</span><span class="t">Index lexical</span></div><div class="d">Mots-clés exacts, insensible aux accents.</div><div class="chips"><span class="chip g">BM25 Okapi</span><span class="chip g">index inversé</span></div></div></div><div class="arrow">▼</div><div class="card a"><div class="hd"><span class="num">3</span><span class="t">Recherche hybride</span></div><div class="d">Dense + BM25 fusionnés, puis filtrés par seuil de pertinence.</div><div class="chips"><span class="chip a">RRF (k=60)</span><span class="chip a">top-k</span><span class="chip a">seuil cosinus</span></div></div><div class="arrow">▼</div><div class="card p"><div class="hd"><span class="num">4</span><span class="t">Génération</span></div><div class="d">Réponse ancrée dans les passages, avec citations [fichier, p.X].</div><div class="chips"><span class="chip p">Groq</span><span class="chip p">gpt-oss-20b</span><span class="chip p">anti-injection</span></div></div><div class="arrow">▼</div><div class="card v"><div class="hd"><span class="num">5</span><span class="t">Vérification</span></div><div class="d">2ᵉ passe LLM : score de fidélité 0-100. Sources surlignées sur la page.</div><div class="chips"><span class="chip v">LLM juge</span><span class="chip v">PyMuPDF</span></div></div><div style="height:10px"></div><div class="note"><b>Attention : ce n'est pas « un seul RAG ».</b> OmniDoc est un <b>MultiRAG</b> : deux index (TEXTE + VISUEL) sont interrogés via un routeur texte / visuel / mixte, puis fusionnés.</div></div>
+<div class="foot"><span>OmniDoc Studio</span><span>#RAG #MultiRAG #GenAI #Python</span></div></div></body></html>

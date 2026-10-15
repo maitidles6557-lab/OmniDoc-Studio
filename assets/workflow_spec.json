@@ -1,0 +1,23 @@
+{
+ "title": "OmniDoc Studio",
+ "subtitle": "MultiRAG  ·  Éditeur PDF intelligent  ·  Analyse d'images",
+ "logo": "assets/logo.jpg",
+ "columns": [
+  {"label": "Interface", "nodes": [{"id": "ui", "text": "Streamlit", "sub": "PDF · images · chat · édition", "accent": "cyan"}]},
+  {"label": "Ingestion", "nodes": [
+    {"id": "pdf", "text": "PyMuPDF + OCR", "sub": "texte · pages scannées", "accent": "blue"},
+    {"id": "vis", "text": "Gemini Vision", "sub": "images → légendes", "accent": "violet"}]},
+  {"label": "MultiRAG", "nodes": [
+    {"id": "tx", "text": "Index TEXTE", "sub": "bge-m3 + FAISS + BM25", "accent": "blue"},
+    {"id": "vx", "text": "Index VISUEL", "sub": "légendes d'images", "accent": "violet"}]},
+  {"label": "Orchestration", "nodes": [
+    {"id": "rt", "text": "Routeur + RRF", "sub": "texte / visuel / mixte", "accent": "pink"}]},
+  {"label": "Génération", "nodes": [
+    {"id": "llm", "text": "Groq LLM", "sub": "réponse ancrée + citations", "accent": "blue"},
+    {"id": "ed", "text": "Éditeur NL", "sub": "langage naturel → actions PDF", "accent": "cyan"}]},
+  {"label": "Résultat", "nodes": [
+    {"id": "ans", "text": "Réponse vérifiée", "sub": "fidélité · pages surlignées", "accent": "violet"},
+    {"id": "out", "text": "PDF modifié", "sub": "caviardage · filigrane · fusion", "accent": "cyan"}]}
+ ],
+ "edges": [["ui","pdf"],["ui","vis"],["pdf","tx"],["vis","vx"],["tx","rt"],["vx","rt"],["rt","llm"],["ui","ed"],["llm","ans"],["ed","out"]]
+}
