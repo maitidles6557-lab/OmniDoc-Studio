@@ -38,7 +38,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       # Lightweight deps only: the suite is offline (fake LLM + fake embedder), so no torch or API keys.
       - name: Install test dependencies
-        run: pip install numpy Pillow pymupdf coverage
+        run: pip install numpy Pillow pymupdf "coverage[toml]"
       - name: Run tests with coverage
         run: |
           python -m coverage run -m unittest discover -s tests -t . -v
