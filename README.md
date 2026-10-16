@@ -5,7 +5,7 @@
 **Chat with your PDFs *and* images, then edit your PDFs in plain language.**
 A multimodal, hybrid-retrieval RAG assistant with a safety-first PDF editor.
 
-[![CI](https://github.com/YOUR_USERNAME/omnidoc-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/omnidoc-studio/actions/workflows/ci.yml)
+[![CI](https://github.com/maitidles6557-lab/omnidoc-studio/actions/workflows/ci.yml/badge.svg)](https://github.com/maitidles6557-lab/omnidoc-studio/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-3776AB?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-FF4B4B?logo=streamlit&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-green)
@@ -89,7 +89,7 @@ The full design, a request sequence diagram, and the reasoning behind each decis
 ## Quick start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/omnidoc-studio.git
+git clone https://github.com/maitidles6557-lab/omnidoc-studio.git
 cd omnidoc-studio
 
 python -m venv .venv && source .venv/bin/activate      # Windows: .venv\Scripts\activate

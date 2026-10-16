@@ -5,7 +5,7 @@ Thanks for your interest in OmniDoc Studio! Bug reports, ideas and pull requests
 ## Development setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/omnidoc-studio.git
+git clone https://github.com/maitidles6557-lab/omnidoc-studio.git
 cd omnidoc-studio
 python -m venv .venv && source .venv/bin/activate
 make install
