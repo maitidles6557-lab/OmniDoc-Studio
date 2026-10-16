@@ -1,0 +1,31 @@
+name: Bug report
+description: Something is broken or behaves unexpectedly
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Upload a PDF…
+        2. Click "Build MultiRAG"…
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: OS, Python version, and whether you use Docker
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Set `LOG_LEVEL=DEBUG` for more detail. **Remove any API keys before pasting.**
+      render: shell
