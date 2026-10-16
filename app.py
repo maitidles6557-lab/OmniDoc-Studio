@@ -18,7 +18,7 @@ from core.theme import THEMES, normalize_theme, theme_css
 setup_logging()
 log = logging.getLogger("omnidoc.app")
 
-LOGO = ASSETS_DIR / "logo.jpg"
+LOGO = ASSETS_DIR / "logo.png"
 AVATAR = ASSETS_DIR / "avatar.png"
 BOT_AVATAR = str(AVATAR) if AVATAR.exists() else ":material/auto_awesome:"
 USER_AVATAR = ":material/person:"
