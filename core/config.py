@@ -55,7 +55,7 @@ TESSERACT_CMD = (
 # --- Modèles (configurables sans toucher au code) ---------------------------------
 EMBED_MODEL = secret("EMBED_MODEL", "BAAI/bge-m3")
 GROQ_MODEL = secret("GROQ_MODEL", "openai/gpt-oss-20b")
-GEMINI_MODEL = secret("GEMINI_MODEL", "gemini-3-flash-preview")
+GEMINI_MODEL = secret("GEMINI_MODEL", "Gemini 2.5 Flash-Lite")
 
 # --- Ingestion ---------------------------------------------------------------------
 MAX_PDF_IMAGES = _int("MAX_PDF_IMAGES", 12)   # images intégrées légendées par PDF (coût API)
